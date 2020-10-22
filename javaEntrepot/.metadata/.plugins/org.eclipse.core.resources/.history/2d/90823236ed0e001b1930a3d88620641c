@@ -1,0 +1,10 @@
+package chapter02;
+
+public class Ex20 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int[] arr = new int[4];//定义一个长度为4的数组
+        System.out.println("arr[3]="+arr[3]);//通过角标4访问数组元素会报错，因为数组查询只能在0~3
+	}
+
+}

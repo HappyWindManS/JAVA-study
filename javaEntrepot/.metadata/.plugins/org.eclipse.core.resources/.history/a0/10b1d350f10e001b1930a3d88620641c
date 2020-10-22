@@ -1,0 +1,27 @@
+package chapter02;
+
+public class Operation01 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//(1)使用循环语句实现自然数1~99的遍历
+        for(int i=1;i<100;i++){
+        	if(i%2==0){
+        		continue;
+        	}else{
+        		System.out.print(i+"  ");
+        	}
+        }
+        System.out.println();
+        //(2)在遍历过程中，通过条件判断当前遍历的数是否为奇数，如果是就累加，否则不加
+        int sum = 0;
+        for(int i=1;i<100;i++){
+        	if(i%2==0){
+        		continue;
+        	}else{
+        		sum += i;
+        	}
+        }
+        System.out.println("奇数总和为："+sum);
+	}
+
+}

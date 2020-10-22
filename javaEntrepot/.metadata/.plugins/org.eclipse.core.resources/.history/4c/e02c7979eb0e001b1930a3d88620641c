@@ -1,0 +1,18 @@
+package com.mr.chapter02;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int x = 0;//瀹氫箟鍙橀噺x锛屽垵濮嬪�间负0
+        int y = 0;//瀹氫箟鍙橀噺y锛屽垵濮嬪�间负0
+        int z = 0;//瀹氫箟鍙橀噺z锛屽垵濮嬪�间负0
+        boolean a,b;//瀹氫箟甯冨皵鍙橀噺a鍜宐
+        a = x>0 & y++>1;//閫昏緫杩愮畻绗�&瀵硅〃杈惧紡杩涜杩愮畻,鐒跺悗灏嗙粨鏋滆祴鍊肩粰a
+        System.out.println("a="+a);
+        System.out.println("y="+y);
+        b = x>0 && z++>1;
+        System.out.println("b="+b);
+        System.out.println("z="+z);
+	}
+
+}

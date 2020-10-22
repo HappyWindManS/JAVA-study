@@ -1,0 +1,21 @@
+package com.mr.chapter02;
+
+public class Operation02 {
+	public static void main(String[] args) {
+		int[] array=new int[]{25,24,12,76,101,96,28};
+		int time=array.length;
+		for(int i=0;i<time;i++)
+		{
+			if(array[i]>array[i+1])
+			{
+				int temp = array[i];
+				array[i] = array[i+1];
+				array[i+1] = temp;
+			}
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.println(array[i]);
+		}
+	}
+}

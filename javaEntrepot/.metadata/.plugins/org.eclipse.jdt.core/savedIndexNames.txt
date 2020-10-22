@@ -1,0 +1,19 @@
+INDEX VERSION 1.127+D:\GITHUB\JAVA-study\javaEntrepot\.metadata\.plugins\org.eclipse.jdt.core
+3060564178.index
+1189294106.index
+3693428018.index
+3439028780.index
+2738279298.index
+4420271.index
+480288979.index
+4045150632.index
+1930544009.index
+3578808386.index
+281125018.index
+2363197799.index
+2747115664.index
+1048303883.index
+2310605176.index
+3340100382.index
+2091459261.index
+470778805.index

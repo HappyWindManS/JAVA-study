@@ -1,0 +1,12 @@
+package com.mr.chapter02;
+
+public class Operation02 {
+	public static void main(String[] args) {
+		int[] array=new int[]{25,24,12,76,101,96,28};
+		int time=array.length;
+		for(int l=0;l<time;l++)
+		{
+			
+		}
+	}
+}

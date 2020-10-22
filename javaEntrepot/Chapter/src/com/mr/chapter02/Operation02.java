@@ -1,0 +1,23 @@
+package com.mr.chapter02;
+
+public class Operation02 {
+	public static void main(String[] args) {
+		int[] array=new int[]{25,24,12,76,101,96,28};
+		for(int i=1;i<array.length;i++)
+		{
+			for(int l=0;l<array.length-1;l++)
+			{
+				if(array[l]>array[l+1])
+				{
+					int temp = array[l];
+					array[l] = array[l+1];
+					array[l+1] = temp;
+				}
+			}
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.println(array[i]);
+		}
+	}
+}
