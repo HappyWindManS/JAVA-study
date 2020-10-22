@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="删除资源“EX80-primeNumber”" deleteContents="true" description="删除资源“EX80-primeNumber”" element1="/EX80-primeNumber" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1603377899100"/>
+</session>
