@@ -1,0 +1,15 @@
+package method;
+
+public class EX81 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		sum(10,20);
+	}
+	
+	public static void sum(int a,int b)
+	{
+		System.out.println(a+"+"+b+"="+(a+b));
+	}
+
+}
