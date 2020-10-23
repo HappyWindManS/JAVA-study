@@ -1,0 +1,39 @@
+package com.mr.chapter03;
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Persons p1= new Persons(18);
+		Persons p2 = new Persons("张三",18);
+		p1.speak();
+		p2.say();
+	}
+
+}
+
+class Persons
+{
+	String name;
+	int age;
+	public Persons(int age)
+	{
+		age = age;
+	}
+	
+	public Persons(String name,int age)
+	{
+		this.name = name;
+		this.age =age;
+	}
+	
+	public void speak ()
+	{
+		System.out.println("我今年"+age+"岁了！");
+	}
+	
+	public void say()
+	{
+		System.out.println("我叫"+name+",我今年"+age+"岁了！");
+	}
+}
