@@ -26,9 +26,11 @@ public class Ex09 {
 	
 	class Dog extends Animal
 	{
+		/*
 		public void shout()
 		{
 			
 		}
+		*/
 	}
 }

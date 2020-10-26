@@ -19,8 +19,9 @@ public class Ex08 {
 	{	
 	}
 	
+	/*
 	class Dog extends Animal
 	{
 		
-	}
+	}*/
 }

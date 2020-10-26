@@ -13,7 +13,7 @@ public class Ex10 {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 		final int num =2;
-		num=4;
+		//num=4;
 	}
 
 }

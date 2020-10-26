@@ -8,11 +8,11 @@ public class Ex11 {
 	 * 在final的含义下
 	 * 除了声明时，其他结构里不可修改
 	 * */
-	final int num;
+	/*final int num;
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 		final int n;
 		n=4;
-	}
+	}*/
 
 }
