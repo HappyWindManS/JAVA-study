@@ -23,9 +23,9 @@ public class EX02 {
 		st.nextToken();
 		int price3 = (int) st.nval;
 		
-		int need1 = (int)(time%amount1==0?time/amount1:time/amount1+1) * price1;
-		int need2 = (int)(time%amount2==0?time/amount2:time/amount2+1) * price2;
-		int need3 = (int)(time%amount3==0?time/amount3:time/amount3+1) * price3;
+		int need1 = (time%amount1==0?time/amount1:time/amount1+1) * price1;
+		int need2 = (time%amount2==0?time/amount2:time/amount2+1) * price2;
+		int need3 = (time%amount3==0?time/amount3:time/amount3+1) * price3;
 
 		System.out.println(need1<need2?Math.min(need1, need3):Math.min(need2, need3));
 	}
