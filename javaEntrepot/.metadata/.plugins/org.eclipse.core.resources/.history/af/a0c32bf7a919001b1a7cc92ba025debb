@@ -1,0 +1,32 @@
+package rudiment;
+
+import java.io.*;
+
+
+public class EX02 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		st.nextToken();
+		double time = st.nval;
+		st.nextToken();
+		double amount1 = st.nval;
+		st.nextToken();
+		double price1 = st.nval;
+		st.nextToken();
+		double amount2 = st.nval;
+		st.nextToken();
+		double price2 = st.nval;
+		st.nextToken();
+		double amount3 = st.nval;
+		st.nextToken();
+		double price3 = st.nval;
+		
+		int need1 = (int) ((time%amount1==0?time/amount1:time/amount1+1) * price1);
+		int need2 = (int) ((time%amount2==0?time/amount2:time/amount2+1) * price2);
+		int need3 = (int) ((time%amount3==0?time/amount3:time/amount3+1) * price3);
+
+		System.out.println(need1<need2?Math.min(need2, need3):Math.min(need1, need3));
+	}
+}

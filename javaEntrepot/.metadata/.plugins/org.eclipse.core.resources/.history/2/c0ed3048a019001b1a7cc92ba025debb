@@ -1,0 +1,28 @@
+package rudiment;
+
+import java.io.*;
+
+public class Text {
+	
+	static double d;
+	static {
+		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		double num = st.nval;
+		int sum =0;
+		int time = 0;		
+		for(int i=0;i<num;i++)
+		{
+			sum += st.nval;
+		}
+		for(int i=0;i<num;i++)
+		{
+			time += st.nval;
+		}
+		d = (sum*3-time*2)/(sum-time);
+	}
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		System.out.print(String.format("%.6f",d));
+	}
+	
+}

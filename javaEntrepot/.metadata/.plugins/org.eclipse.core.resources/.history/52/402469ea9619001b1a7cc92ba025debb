@@ -1,0 +1,23 @@
+package rudiment;
+
+import java.util.Scanner;
+
+public class Text {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int num = input.nextInt();
+		int sum =0;
+		int time = 0;
+		for(int i=0;i<num;i++)
+		{
+			sum += input.nextInt();
+		}
+		for(int i=0;i<num;i++)
+		{
+			time += input.nextInt();
+		}
+		System.out.println((sum*3-time*2)/sum-time);
+	}
+}
