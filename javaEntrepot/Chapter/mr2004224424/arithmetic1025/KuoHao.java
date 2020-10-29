@@ -20,17 +20,19 @@ public class KuoHao {
 		Stack temp = new Stack();
 		for(int i=0;i<time;i++)
 		{
+			char ch = getArr[i];
 			if(temp.empty())
 			{
-				temp.push(getArr[i]);
+				temp.push(ch);
+				System.out.println(ch);
 			}
-			else if(getNum((char) temp.peek())+getNum(getArr[i])!=0)
+			else if(getNum((char) temp.peek())+getNum(getArr[i]) == 0)
 			{
-				temp.push(getArr[i]);
+				temp.pop();
 			}
 			else
 			{
-				temp.pop();
+				temp.push(getArr[i]);
 			}
 		}
 		

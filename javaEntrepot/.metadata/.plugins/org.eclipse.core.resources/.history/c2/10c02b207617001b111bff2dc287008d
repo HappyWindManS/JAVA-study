@@ -1,6 +1,7 @@
 package arithmetic1025;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class KuoHao {
 
@@ -14,7 +15,27 @@ public class KuoHao {
 	
 	static boolean isBool(String text)
 	{
-		Stack sta=new Stack();
+		char[] getArr = text.toCharArray();
+		int time = text.length()-1;
+		Stack temp = new Stack();
+		for(int i=0;i<time;i++)
+		{
+			char ch = getArr[i];
+			if(temp.empty())
+			{
+				temp.push(ch);
+			}
+			else if(getNum((char) temp.peek())+getNum(getArr[i]) == 0)
+			{
+				temp.pop();
+			}
+			else
+			{
+				temp.push(getArr[i]);
+			}
+		}
+		
+		return temp.empty()?false:true;
 	}
 	
 	static int getNum(char ch)

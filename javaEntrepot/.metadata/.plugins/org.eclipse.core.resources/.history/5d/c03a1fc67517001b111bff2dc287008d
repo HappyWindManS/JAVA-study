@@ -15,7 +15,27 @@ public class KuoHao {
 	
 	static boolean isBool(String text)
 	{
-		Stack left=new Stack();
+		char[] getArr = text.toCharArray();
+		int time = text.length()-1;
+		Stack<char> temp = new Stack<char>();
+		for(int i=0;i<time;i++)
+		{
+			char ch = getArr[i]
+			if(temp.empty())
+			{
+				temp.push(getArr[i]);
+			}
+			else if(getNum((char) temp.peek())+getNum(getArr[i])!=0)
+			{
+				temp.push(getArr[i]);
+			}
+			else
+			{
+				temp.pop();
+			}
+		}
+		
+		return temp.empty()?false:true;
 	}
 	
 	static int getNum(char ch)
