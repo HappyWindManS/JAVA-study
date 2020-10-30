@@ -18,6 +18,7 @@ public class EX06 {
 		
 		
 		int sum =0;
+		//
 		int getNum = num.length();
 		int temp = Integer.parseInt(num.substring(0,1));
 		if(temp>time)
