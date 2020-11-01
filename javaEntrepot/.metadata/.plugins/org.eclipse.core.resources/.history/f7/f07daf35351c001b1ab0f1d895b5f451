@@ -1,0 +1,11 @@
+package com.mr.chapter04;
+
+//下面代码时自定义一个异常类继承自Exception
+public class DivideByMinusException extends Exception{
+	public DivideByMinusException() {
+		super();//调用Exception无参的构造方法
+	}
+	public DivideByMinusException (String message) {
+		super();//调用Exception有参的构造方法
+	}
+}

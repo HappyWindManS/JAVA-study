@@ -26,21 +26,25 @@ public class EX03 {
 		}
 		//选择权重最大的
 		herb qz = new herb();
-		boolean bool=true;
-		int sum = 0;
-		
+		double sum = 0;
 		//先选择时间最多的方案
 		for(herb temp:list)
 		{
 			if(qz.getTime()<temp.getTime())
 			{
 				qz=temp;
+				qz.setNum((int)(timeLength/qz.getTime()));
 			}
-		}
+		}		
+		sum = (int) (timeLength/qz.getTime()) *qz.getPrice();
+		timeLength -= qz.getTime();
 		//优化方案
-		while(bool)
-		{		
-			
+		for(herb temp:list)
+		{
+			for(herb herbs:list)
+			{
+				
+			}
 		}
 		System.out.print(sum);
 	}
