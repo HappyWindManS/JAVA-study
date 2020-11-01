@@ -20,7 +20,7 @@ public class EX03 {
 			int price=input.nextInt();
 			if(time < timeLength)
 			{
-				herb temp = new herb(time,price); 
+				herb temp = new herb(input.nextInt(),input.nextInt()); 
 				list.add(temp);
 			}
 		}
@@ -28,19 +28,12 @@ public class EX03 {
 		herb qz = new herb();
 		boolean bool=true;
 		int sum = 0;
-		
-		//先选择时间最多的方案
-		for(herb temp:list)
-		{
-			if(qz.getTime()<temp.getTime())
-			{
-				qz=temp;
-			}
-		}
-		//优化方案
 		while(bool)
 		{		
-			
+			for(herb temp:list)
+			{
+				if(qz.getNum())
+			}
 		}
 		System.out.print(sum);
 	}
@@ -48,14 +41,13 @@ public class EX03 {
 	public static class herb
 	{
 		herb()
-		{ }
+		{}
 	    herb(int time,int price)
 		{
 			setTime(time);
 			setPrice(price);
 		}
-		private int num;
-	    
+		
 		private int time;
 		
 		private int price;
@@ -74,12 +66,6 @@ public class EX03 {
 
 		public void setPrice(int price) {
 			this.price = price;
-		}
-		public int getNum() {
-			return num;
-		}
-		public void setNum(int num) {
-			this.num = num;
 		}
 	}
 }

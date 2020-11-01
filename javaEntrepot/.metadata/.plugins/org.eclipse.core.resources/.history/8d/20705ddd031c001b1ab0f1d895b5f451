@@ -1,0 +1,70 @@
+package arrays;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+
+public class EX03 {
+
+	public static void main(String[] args){
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int timeLength =input.nextInt();
+		int kind = input.nextInt();
+		
+		List<herb> list = new ArrayList<herb>();
+		
+		for(int i=0;i<kind;i++)
+		{
+			
+		}
+		
+	}
+	
+	public class herb
+	{
+	    herb(int time,int num)
+		{
+			setTime(time);
+			setNum(num);
+			setPrice(getTime()/getNum());
+		}
+		
+		private int time;
+		
+		private int num;
+		
+		private double price;
+
+		public double getTime() {
+			return time;
+		}
+
+		public void setTime(int time) {
+			this.time = time;
+		}
+
+		public double getNum() {
+			return num;
+		}
+
+		public void setNum(int num) {
+			this.num = num;
+		}
+
+		public double getPrice() {
+			return price;
+		}
+
+		public void setPrice(double price) {
+
+			this.price = price;
+		}
+	
+	}
+}
+
