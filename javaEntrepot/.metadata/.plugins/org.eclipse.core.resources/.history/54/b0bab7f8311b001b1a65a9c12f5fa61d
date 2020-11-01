@@ -1,0 +1,31 @@
+package rudiment;
+
+import java.util.Scanner;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int num = input.nextInt();
+		//判断第几个数
+		int time = 0;
+		//设定列数
+		int row=1;
+		for(;time<num;row++)
+		{
+			time += row;
+		}
+		time -= row;		
+		--row;
+		//判断是单数列还是双数列
+		if(row%2==0)
+		{
+			System.out.print(num+"/"+(row-time));
+		}
+		else
+		{
+			System.out.print((row-time)+"/"+num);
+		}
+	}
+}

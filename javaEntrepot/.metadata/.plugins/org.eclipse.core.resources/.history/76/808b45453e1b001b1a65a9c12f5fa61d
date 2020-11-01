@@ -1,0 +1,28 @@
+package rudiment;
+
+import java.util.Scanner;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		//获取第几位数
+		int num = input.nextInt();
+		//判断在第几列
+		int line = 0;
+		int temp = 0;
+		int time = 0;
+		int i = 1;
+		for(;temp<num;i++)
+		{
+			temp += i;
+			line = i;
+			time = temp - num;
+		}
+
+		System.out.println(time);
+		System.out.println(temp);
+		System.out.println(line);
+	}
+}

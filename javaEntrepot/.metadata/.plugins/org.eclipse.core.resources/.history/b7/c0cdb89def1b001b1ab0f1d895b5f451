@@ -1,0 +1,31 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+
+public class EX01 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		int[] array = new int[10];
+		for(int i=0;i<10;i++)
+		{
+			st.nextToken();
+			array[0] = (int)st.nval;
+		}
+		st.nextToken();
+		int num = (int)st.nval;
+		int time = 0;
+		for(int i=0;i<10;i++)
+		{
+			if(array[i]>num+30)
+			{
+				time++;
+			}
+		}
+		System.out.print(time);
+	}
+}

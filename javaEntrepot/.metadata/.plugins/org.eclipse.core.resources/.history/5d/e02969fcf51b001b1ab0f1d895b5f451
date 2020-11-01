@@ -1,0 +1,32 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+
+public class EX02 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		st.nextToken();
+		double cd = st.nval;
+		st.nextToken();
+		double cs = st.nval;
+		st.nextToken();
+		double qy1 = st.nval;
+		st.nextToken();
+		double qy11 = st.nval;
+		st.nextToken();
+		double qy2 = st.nval;
+		st.nextToken();
+		double qy22 = st.nval;
+		st.nextToken();
+		double qy3 = st.nval;
+		st.nextToken();
+		double qy33 = st.nval;
+		System.out.print(cd+1-(qy11-qy1)-(qy2-qy22)-(qy3-qy33));
+	}
+
+}

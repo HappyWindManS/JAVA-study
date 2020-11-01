@@ -11,9 +11,9 @@ public class EX06 {
 	public static void main(String[] args)throws IOException{
 		// TODO 自动生成的方法存根
 		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-		st.nextToken();;
+		st.nextToken();
 		String num = st.sval;
-		st.nextToken();;
+		st.nextToken();
 		int time = (int)st.nval;
 		
 		

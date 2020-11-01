@@ -1,0 +1,23 @@
+package rudiment;
+
+import java.util.Scanner;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		//获取第几位数
+		int num = input.nextInt();
+		//判断在第几列
+		int line = 0;
+		
+		for(int i = 1,temp = 0;temp<num;i++)
+		{
+			temp += i;
+			line = i;
+		}
+		
+		System.out.print(line);
+	}
+}
