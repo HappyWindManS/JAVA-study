@@ -11,7 +11,7 @@ public class EX06 {
 		double temp = input.nextDouble();
 		
 		String num ="";
-		for(int i=1;i<=time;i++)
+		for(int i=1;i<time;i++)
 		{
 			num+=i;		
 		}
@@ -20,7 +20,7 @@ public class EX06 {
 			if(i!=temp)
 			{
 				String c = String.valueOf(i);
-				num = num.replace(c, "");
+				num.replace(c, "");
 			}
 		}
 		System.out.print(num.length());

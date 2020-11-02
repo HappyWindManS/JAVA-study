@@ -11,18 +11,11 @@ public class EX06 {
 		double temp = input.nextDouble();
 		
 		String num ="";
-		for(int i=1;i<=time;i++)
+		int sum = 0;
+		for(int i=1;i<time;i++)
 		{
 			num+=i;		
 		}
-		for(int i=0;i<10;i++)
-		{
-			if(i!=temp)
-			{
-				String c = String.valueOf(i);
-				num = num.replace(c, "");
-			}
-		}
-		System.out.print(num.length());
+		System.out.print(sum);
 	}
 }

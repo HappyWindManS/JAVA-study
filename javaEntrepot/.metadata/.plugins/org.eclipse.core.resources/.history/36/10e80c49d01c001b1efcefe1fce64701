@@ -23,6 +23,6 @@ public class EX06 {
 				num = num.replace(c, "");
 			}
 		}
-		System.out.print(num.length());
+		System.out.print(num);
 	}
 }
