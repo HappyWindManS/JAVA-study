@@ -13,9 +13,9 @@ public class EX02 {
 		double[] array=new double[length];
 		
 		for(int i=0;i<num;i++)
-		{		
-			int temp =input.nextInt();
-			int temp1 = input.nextInt();
+		{
+			double temp =input.nextInt();
+			double temp1 = input.nextInt();
 			temp1 = temp1!=length?temp1+1:temp1;
 			for(int l=(int) temp;l<temp1;l++)
 			{

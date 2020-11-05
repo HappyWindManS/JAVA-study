@@ -1,0 +1,40 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+
+public class EX02 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer st =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		st.nextToken();
+		int length=(int)st.nval;
+		st.nextToken();
+		int num = (int)st.nval;
+		
+		double[] array=new double[length];
+		
+		for(int i=0;i<num;i++)
+		{
+			st.nextToken();
+			double temp = st.nval;
+			st.nextToken();
+			double temp1 = st.nval;
+			temp1 = temp1!=length?temp1+1:temp1;
+			for(int l=(int) temp;l<temp1;l++)
+			{
+				array[l] = 1;
+			}
+		}
+		int sum = 0;
+		for(int i=0;i<array.length;i++)
+		{
+			sum += array[i];
+		}
+		System.out.print(length-sum+1);
+	}
+
+}
