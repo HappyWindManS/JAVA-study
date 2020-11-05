@@ -23,7 +23,7 @@ public class EX03 {
 			}
 			array.push(temp);
 		}
-		while(!array.empty())
+		while(array.empty())
 		{
 			System.out.print(array.pop()+" ");
 		}

@@ -23,9 +23,9 @@ public class EX03 {
 			}
 			array.push(temp);
 		}
-		while(!array.empty())
+		for(int i:array)
 		{
-			System.out.print(array.pop()+" ");
+			System.out.print(i+" ");
 		}
 	}
 }

@@ -1,0 +1,17 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class EX03 {
+
+	public static void main(String[] args){
+		// TODO 自动生成的方法存根
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        StringBuffer sBuffer = new StringBuffer(str);
+        str = sBuffer.reverse().toString().replace("0", "").trim();
+        
+        System.out.println(str);
+	}
+}
+
