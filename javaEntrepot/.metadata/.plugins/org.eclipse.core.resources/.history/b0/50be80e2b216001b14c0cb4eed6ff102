@@ -1,0 +1,14 @@
+package arithmetic1025;
+
+public class huiwen {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+
+	}
+	
+	static boolean isBool(String str)
+	{
+		return true;
+	}
+}

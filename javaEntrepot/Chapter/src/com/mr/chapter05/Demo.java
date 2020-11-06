@@ -1,0 +1,13 @@
+package com.mr.chapter05;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		final String text = "HelloWorld";
+		char a= 'a';
+		int b = a;
+		System.out.print((char)(b-32));
+	}
+
+}
