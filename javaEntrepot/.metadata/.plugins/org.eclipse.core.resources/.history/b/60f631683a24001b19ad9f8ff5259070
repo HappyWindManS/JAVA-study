@@ -8,7 +8,8 @@ public class Demo {
 		String str = ascllCnv(text);
 		System.out.println(str);
 		
-		System.out.println(Cnv(text));
+		String a = "asd";
+		System.out.println(a.toLowerCase());
 	}
 	
 	public static String ascllCnv(String text)
@@ -31,18 +32,6 @@ public class Demo {
 	public static String Cnv(String text)
 	{
 		char[] cArray = text.toCharArray();
-		StringBuffer ref = new StringBuffer();
-		for(Character ch:cArray)
-		{
-			if(Character.isLowerCase(ch))
-			{
-				ref.append(Character.toUpperCase(ch));
-			}
-			else
-			{
-				ref.append(Character.toLowerCase(ch));
-			}
-		}
-		return ref.reverse().toString();
+		return "";
 	}
 }

@@ -6,9 +6,7 @@ public class Demo {
 		// TODO 自动生成的方法存根
 		final String text = "HelloWorld";
 		String str = ascllCnv(text);
-		System.out.println(str);
-		
-		System.out.println(Cnv(text));
+		System.out.print(str);
 	}
 	
 	public static String ascllCnv(String text)
@@ -28,21 +26,4 @@ public class Demo {
 		return String.valueOf(temp);
 	}
 
-	public static String Cnv(String text)
-	{
-		char[] cArray = text.toCharArray();
-		StringBuffer ref = new StringBuffer();
-		for(Character ch:cArray)
-		{
-			if(Character.isLowerCase(ch))
-			{
-				ref.append(Character.toUpperCase(ch));
-			}
-			else
-			{
-				ref.append(Character.toLowerCase(ch));
-			}
-		}
-		return ref.reverse().toString();
-	}
 }

@@ -43,6 +43,6 @@ public class Demo {
 				ref.append(Character.toLowerCase(ch));
 			}
 		}
-		return ref.reverse().toString();
+		return ref.toString();
 	}
 }

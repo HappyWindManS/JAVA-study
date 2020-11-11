@@ -9859,3 +9859,28 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 
 !ENTRY org.eclipse.recommenders.models.rcp 1 0 2020-11-11 21:39:03.984
 !MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.rcp 2 23 2020-11-11 23:39:00.374
+!MESSAGE Failed to parse news feed
+!STACK 0
+org.xml.sax.SAXParseExceptionpublicId: -//W3C//DTD XHTML 1.0 Strict//EN; systemId: http://10.0.9.35/a79.htm?wlanuserip=10.114.35.61&wlanacname=ME60&wlanacip=10.0.9.33&wlanusermac=8d10ebe7dca39bca6d9fd689b1bacae6e4b2f40fb76c7657; lineNumber: 1; columnNumber: 3; 文档类型声明包含或指向的标记声明必须格式正确。
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(Unknown Source)
+	at org.eclipse.recommenders.internal.rcp.news.RssParser.getEntries(RssParser.java:53)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.getNewsItems(CheckForProjectNewsJob.java:97)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+--------------- linked to ------------------
+javax.xml.xpath.XPathExpressionException: org.xml.sax.SAXParseExceptionpublicId: -//W3C//DTD XHTML 1.0 Strict//EN; systemId: http://10.0.9.35/a79.htm?wlanuserip=10.114.35.61&wlanacname=ME60&wlanacip=10.0.9.33&wlanusermac=8d10ebe7dca39bca6d9fd689b1bacae6e4b2f40fb76c7657; lineNumber: 1; columnNumber: 3; 文档类型声明包含或指向的标记声明必须格式正确。
+	at com.sun.org.apache.xpath.internal.jaxp.XPathExpressionImpl.evaluate(Unknown Source)
+	at org.eclipse.recommenders.internal.rcp.news.RssParser.getEntries(RssParser.java:53)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.getNewsItems(CheckForProjectNewsJob.java:97)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: -//W3C//DTD XHTML 1.0 Strict//EN; systemId: http://10.0.9.35/a79.htm?wlanuserip=10.114.35.61&wlanacname=ME60&wlanacip=10.0.9.33&wlanusermac=8d10ebe7dca39bca6d9fd689b1bacae6e4b2f40fb76c7657; lineNumber: 1; columnNumber: 3; 文档类型声明包含或指向的标记声明必须格式正确。
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	... 6 more

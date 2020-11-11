@@ -36,13 +36,13 @@ public class Demo {
 		{
 			if(Character.isLowerCase(ch))
 			{
-				ref.append(Character.toUpperCase(ch));
+				ref.append(Character.toLowerCase(ch));
 			}
 			else
 			{
-				ref.append(Character.toLowerCase(ch));
+				ref.append(Character.toUpperCase(ch));
 			}
 		}
-		return ref.reverse().toString();
+		return ref.toString();
 	}
 }
