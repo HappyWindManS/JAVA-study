@@ -26,7 +26,7 @@ public class Demo {
 				temp.append((char)(num+32));
 			}
 		}
-		return temp.toString();
+		return String.valueOf(temp);
 	}
 
 	public static String Cnv(String text)
@@ -34,7 +34,17 @@ public class Demo {
 		char[] cArray = text.toCharArray();
 		StringBuffer ref = new StringBuffer();
 		for(Character ch:cArray)
-			ref.append(Character.isLowerCase(ch)?Character.toUpperCase(ch):Character.toLowerCase(ch));
+		{
+			//char的包装类 Character
+			if(Character.isLowerCase(ch))
+			{
+				ref.append(Character.toUpperCase(ch));
+			}
+			else
+			{
+				ref.append(Character.toLowerCase(ch));
+			}
+		}
 		return ref.reverse().toString();
 	}
 }

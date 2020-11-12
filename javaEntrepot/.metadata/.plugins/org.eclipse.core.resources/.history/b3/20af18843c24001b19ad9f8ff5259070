@@ -34,7 +34,7 @@ public class Demo {
 		char[] cArray = text.toCharArray();
 		StringBuffer ref = new StringBuffer();
 		for(Character ch:cArray)
-			ref.append(Character.isLowerCase(ch)?Character.toUpperCase(ch):Character.toLowerCase(ch));
+			ref.append(Character.isLowerCase(ch)?Character.toUpperCase(ch):ref.append(Character.toLowerCase(ch)));
 		return ref.reverse().toString();
 	}
 }
