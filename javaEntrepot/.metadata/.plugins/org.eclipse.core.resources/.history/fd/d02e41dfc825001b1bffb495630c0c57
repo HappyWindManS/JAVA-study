@@ -1,0 +1,24 @@
+package rudiment;
+
+import java.util.Scanner;
+
+public class EX06 {
+
+	public static void main(String[] args){
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		
+	}
+	
+	public static int getTime(String text,char ch)
+	{
+		int time = 0;
+		char[] charArray = text.toCharArray();
+		for(Character c:charArray)
+		{
+			if(c.equals(ch))
+				time++;
+		}
+		return time;
+	}
+}

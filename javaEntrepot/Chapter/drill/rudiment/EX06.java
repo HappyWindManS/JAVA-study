@@ -1,28 +1,41 @@
 package rudiment;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
 import java.util.Scanner;
 
 public class EX06 {
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		// TODO 自动生成的方法存根
-		Scanner input = new Scanner(System.in);
-		double time = input.nextDouble();
-		double temp = input.nextDouble();
+		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		input.nextToken();
+	    double time = input.nval;
+	    input.nextToken();
+		char text =  (char) input.nval;
 		
-		String num ="";
-		for(int i=1;i<=time;i++)
+		int sum = 0;
+		for(int i=0;i<time;i++)
 		{
-			num+=i;		
+			sum += getTime(String.valueOf(i),text);
 		}
-		for(int i=0;i<10;i++)
+		
+		System.out.println(sum);
+	}
+	
+	public static int getTime(String text,char ch)
+	{
+		int time = 0;
+		char[] charArray = text.toCharArray();
+		for(char c:charArray)
 		{
-			if(i!=temp)
+			if(c == ch)
 			{
-				String c = String.valueOf(i);
-				num = num.replace(c, "");
+				time++;
 			}
 		}
-		System.out.print(num.length());
+		return time;
 	}
 }
