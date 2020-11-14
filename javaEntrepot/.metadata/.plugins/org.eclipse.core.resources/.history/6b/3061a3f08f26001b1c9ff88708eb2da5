@@ -1,5 +1,9 @@
 package rudiment;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
 import java.util.Scanner;
 
 public class EX06 {
@@ -10,13 +14,12 @@ public class EX06 {
 		int time = input.nextInt();
 		int get = input.nextInt();
 		int sum = 0;
-		int num;
-		for(int i=0;i<=time;i++)
+		for(int i=0;i<time;i++)
 		{
-			num = i;
+			int num = i;
 			while(!(num < 1))
 			{
-				if(num%10==get)
+				if(num%10!=0)
 				sum++;
 				num /= 10;
 			}

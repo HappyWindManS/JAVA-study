@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
+import java.util.Scanner;
 
 public class EX08 {
 
@@ -12,20 +13,34 @@ public class EX08 {
 		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		input.nextToken();
 		int num = (int) input.nval;
-		StringBuilder stringBuffer = new StringBuilder();
-		while(num%10==0)
+		StringBuffer stringBuffer = new StringBuffer();
+		if(num%10==0)
 		{
-			num /= 10;
+			if(num<0)
+			{
+				stringBuffer.append(Math.abs(num/10));
+				stringBuffer.append("-");			
+			}
+			else
+			{
+				stringBuffer.append(num/10);
+				stringBuffer.append("-");	
+			}
 		}
-		if(num<0)
+		else 
 		{
-			stringBuffer.append(Math.abs(num));
-			stringBuffer.append("-");			
-		}
-		else
-		{
-			stringBuffer.append(num);
+			if(num<0)
+			{
+				stringBuffer.append(Math.abs(num));
+				stringBuffer.append("-");			
+			}
+			else
+			{
+				stringBuffer.append(num);
+				stringBuffer.append("-");	
+			}
 		}
 		System.out.println(stringBuffer.reverse().toString());
 	}
+
 }

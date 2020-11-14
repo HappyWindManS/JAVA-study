@@ -12,7 +12,8 @@ public class EX08 {
 		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		input.nextToken();
 		int num = (int) input.nval;
-		StringBuilder stringBuffer = new StringBuilder();
+		StringBuffer stringBuffer = new StringBuffer();
+
 		while(num%10==0)
 		{
 			num /= 10;
@@ -28,4 +29,5 @@ public class EX08 {
 		}
 		System.out.println(stringBuffer.reverse().toString());
 	}
+
 }
