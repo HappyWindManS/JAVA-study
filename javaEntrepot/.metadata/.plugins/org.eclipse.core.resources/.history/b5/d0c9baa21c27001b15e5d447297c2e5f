@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
+import java.util.Scanner;
 
 public class EX02 {
 
@@ -11,10 +12,10 @@ public class EX02 {
 		// TODO 自动生成的方法存根
 		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		input.nextToken();
-		double length= (int) (input.nval+1);
+		double length= input.nval+1;
 		input.nextToken();
 		int num = (int)input.nval;
-	
+		
 		double[][] array = new double[num][2];
 		for(int i=0;i<num;i++)
 		{
@@ -23,6 +24,7 @@ public class EX02 {
 			input.nextToken();
 			array[i][1] = input.nval;
 		}
+		
 		for(int i=0;i<num;i++)
 		{
 			for(int l=0;l<num;l++)
@@ -46,7 +48,7 @@ public class EX02 {
 			length -= array[i][1] - array[i][0] +1;
 		}
 		
-		System.out.println((int)length);
+		System.out.println(length);
 	}
 
 }

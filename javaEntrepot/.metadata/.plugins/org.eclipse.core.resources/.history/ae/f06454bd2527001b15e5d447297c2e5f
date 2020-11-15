@@ -14,7 +14,7 @@ public class EX02 {
 		double length= (int) (input.nval+1);
 		input.nextToken();
 		int num = (int)input.nval;
-	
+		
 		double[][] array = new double[num][2];
 		for(int i=0;i<num;i++)
 		{
@@ -23,6 +23,7 @@ public class EX02 {
 			input.nextToken();
 			array[i][1] = input.nval;
 		}
+		
 		for(int i=0;i<num;i++)
 		{
 			for(int l=0;l<num;l++)
