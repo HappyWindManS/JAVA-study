@@ -21,20 +21,20 @@ public class EX04 {
 		}	
 		int[] sum = new int[1];
 		boolean[] bool = new boolean[1];
+		boolean bool = true;
 		hash.forEach((key,value) -> 
 		{
-			bool[0] = true;
 			hash.forEach((k,v) -> 
 			{
 				int temp = (int)key-(int)k;
-				if(hash.containsKey(temp)&&(int)k!=temp&&bool[0]==true)
+				if(hash.containsKey(temp)&&(int)k!=temp&&bool==true)
 				{					
 					sum[0]++;
-					bool[0] = false;
+					bool = false;
 				}
 			});
 		});
-		System.out.println(sum[0]);
+		System.out.println(sum[0]/2);
 	}
 
 }

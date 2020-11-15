@@ -23,7 +23,6 @@ public class EX04 {
 		boolean[] bool = new boolean[1];
 		hash.forEach((key,value) -> 
 		{
-			bool[0] = true;
 			hash.forEach((k,v) -> 
 			{
 				int temp = (int)key-(int)k;
@@ -34,7 +33,7 @@ public class EX04 {
 				}
 			});
 		});
-		System.out.println(sum[0]);
+		System.out.println(sum[0]/2);
 	}
 
 }

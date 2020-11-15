@@ -34,7 +34,7 @@ public class EX04 {
 				}
 			});
 		});
-		System.out.println(sum[0]);
+		System.out.println(sum[0]/2);
 	}
 
 }
