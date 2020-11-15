@@ -1,4 +1,5 @@
 package arrays;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,6 +15,7 @@ public class EX04 {
 		input.nextToken();
 		int size = (int) input.nval;
 		Hashtable hash = new Hashtable(size);
+        Hashtable ha = new Hashtable(size);
 		for(int i=0;i<size;i++)
 		{
 			input.nextToken();
@@ -25,13 +27,15 @@ public class EX04 {
 			hash.forEach((k,v) -> 
 			{
 				int temp = (int)key-(int)k;
-				if(hash.containsKey(temp)&&(int)k!=temp)
-				{					
+				if(hash.containsKey(temp)&&(int)k!=temp&&!ha.containsKey(temp))
+				{
+					ha.put(key, 1);
+					ha.put(temp, 1);
 					sum[0]++;
 				}
 			});
 		});
-		System.out.println(sum[0]/2);
+		System.out.println(sum[0]);
 	}
 
 }

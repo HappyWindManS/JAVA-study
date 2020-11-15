@@ -1,4 +1,5 @@
 package arrays;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,25 +14,23 @@ public class EX04 {
 		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		input.nextToken();
 		int size = (int) input.nval;
-		Hashtable hash = new Hashtable(size);
+		int[] arrayTemp = new int[size];
+		int max = 0;
 		for(int i=0;i<size;i++)
 		{
-			input.nextToken();
-			hash.put((int)input.nval,i);
-		}	
-		int[] sum = new int[1];
-		hash.forEach((key,value) -> 
-		{
-			hash.forEach((k,v) -> 
+			arrayTemp[i] = (int) input.nval;
+			if(arrayTemp[i]>max)
 			{
-				int temp = (int)key-(int)k;
-				if(hash.containsKey(temp)&&(int)k!=temp)
-				{					
-					sum[0]++;
-				}
-			});
-		});
-		System.out.println(sum[0]/2);
+				max = arrayTemp[i];
+			}
+		}
+		int[] array = new int[max];
+		for(int i=0;i<size;i++)
+		{
+			array[array[i]] = 1;
+		}
+		
+		System.out.println();
 	}
 
 }

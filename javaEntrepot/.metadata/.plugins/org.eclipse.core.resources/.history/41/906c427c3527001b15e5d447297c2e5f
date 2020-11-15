@@ -1,0 +1,56 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.Hashtable;
+
+public class EX04 {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		input.nextToken();
+		int size = (int) input.nval;
+		int[] arrayTemp = new int[size];
+		int max = 0;
+		int sum = 0;
+		for(int i=0;i<size;i++)
+		{
+			input.nextToken();
+			arrayTemp[i] = (int) input.nval;
+			if(arrayTemp[i]>max)
+			{
+				max = arrayTemp[i];
+			}
+		}
+		int[] array = new int[max+1];
+		for(int i=0;i<size;i++)
+		{
+			array[arrayTemp[i]] = 1;
+		}
+		
+		for(int i=0;i<size;i++)
+		{
+			int[] a = array;
+			for(int l=0;l<size;l++)
+			{
+				if(arrayTemp[i]<=arrayTemp[l])
+				{
+					break;
+				}
+				int temp = arrayTemp[i]-arrayTemp[l];
+				if(a[temp]==1)
+				{
+					a[temp] = 0;
+					a[arrayTemp[l]]=0;
+					sum++;
+				}
+			}
+		}
+		System.out.println(sum);
+	}
+
+}
