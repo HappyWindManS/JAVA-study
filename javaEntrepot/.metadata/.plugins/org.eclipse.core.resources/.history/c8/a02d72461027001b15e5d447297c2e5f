@@ -1,0 +1,23 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class EX02 {
+
+	public static void main(String[] args){
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int length= input.nextInt()+1;
+		int num = input.nextInt();
+		
+		int[][] array = new int[num][2];
+		for(int i=0;i<num;i++)
+		{
+			array[i][0] = input.nextInt();
+			array[i][1] = input.nextInt();
+		}
+		
+		
+	}
+
+}
