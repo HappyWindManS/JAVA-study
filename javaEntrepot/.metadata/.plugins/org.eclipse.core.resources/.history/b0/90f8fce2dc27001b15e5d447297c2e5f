@@ -1,0 +1,70 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.Hashtable;
+import java.util.StringTokenizer;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		InputReader input = new InputReader(System.in);
+		
+		double row = input.nextInt();
+		double column = input.nextInt()*1000;
+		
+		Hashtable<Double, Integer> hash = new Hashtable<Double, Integer>();
+		int size = (int) (input.nextInt()+1);
+		int[] array = new int[size];
+		for(int i=0;i<row;i++)
+		{
+			for(int l=1000;l<column+1;l+=1000)
+			{
+			    double getTime =  input.nextInt();
+				double num = l+getTime;
+				if(!hash.containsKey(num))
+				{
+					array[(int)getTime]++;
+					hash.put(num, 1);
+				}
+			}
+		}
+		
+		for(int i=1;i<size;i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+	}
+
+
+	static class InputReader {
+	    public BufferedReader reader;
+	    public StringTokenizer tokenizer;
+	 
+	    public InputReader(InputStream stream) {
+	        reader = new BufferedReader(new InputStreamReader(stream), 32768);
+	        tokenizer = null;
+	    }
+	 
+	    public String next() {
+	        while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+	            try {
+	                tokenizer = new StringTokenizer(reader.readLine());
+	            } catch (IOException e) {
+	                throw new RuntimeException(e);
+	            }
+	        }
+	        return tokenizer.nextToken();
+	    }
+	 
+	    public int nextInt() {
+	        return Integer.parseInt(next());
+	    }
+	 
+	}
+
+}

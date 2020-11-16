@@ -1,0 +1,43 @@
+package arrays;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+
+public class EX04_2 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO 自动生成的方法存根
+		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		input.nextToken();
+		int size = (int) input.nval;
+		
+		int[] arrayGetNum = new int[size];
+		boolean[] array = new boolean[10001];
+		for(int i=0;i<size;i++)
+		{
+			input.nextToken();
+			arrayGetNum[i]=(int) input.nval;
+			array[arrayGetNum[i]]=true;
+		}
+		int sum = 0;
+		for(int i=0;i<size;i++)
+		{
+			for(int l=0;l<size;l++)
+			{
+				if(arrayGetNum[i]<arrayGetNum[l])
+				{
+					break;
+				}
+				if(array[arrayGetNum[i]-arrayGetNum[l]])
+				{
+					sum++;
+					break;
+				}
+			}
+		}
+		System.out.println(sum);
+	}
+
+}
