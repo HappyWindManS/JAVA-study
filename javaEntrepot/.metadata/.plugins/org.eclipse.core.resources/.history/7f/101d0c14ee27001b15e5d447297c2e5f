@@ -1,0 +1,42 @@
+package stringtext;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class EX02 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO 自动生成的方法存根
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		String text = input.readLine();
+		char[] array = text.replace("-", "").toCharArray();
+		String[] set = text.split("-");
+		int time = array.length-1;
+		int bool = 0;
+		for(int i=0,l=1;i<time;i++,l++)
+		{
+			bool += l * Integer.parseInt(array[i]+"");
+		}
+		bool %= 11;
+		if(bool==array[time+1])
+		{
+			System.out.println("Rigth");
+		}
+		else{
+			for(int i=0;i<set.length-1;i++)
+			{
+				System.out.print(set[i]+"-");
+			}
+		
+			if(bool!=array[time]&&bool!=10)
+			{
+				System.out.println(bool);
+			}
+			if(bool==10)
+			{
+				System.out.println("X");
+			}
+		}
+	}
+}
