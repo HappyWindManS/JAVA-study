@@ -25,7 +25,7 @@ public class EX03 {
 		}
 		if(sum == 0)
 		{
-			System.out.println(-1);
+			System.out.println(min);
 		}
 		else
 		{

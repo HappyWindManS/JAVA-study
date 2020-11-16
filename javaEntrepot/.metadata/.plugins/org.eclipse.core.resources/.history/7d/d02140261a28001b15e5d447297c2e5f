@@ -23,13 +23,14 @@ public class EX03 {
 				sum++;
 			}
 		}
-		if(sum == 0)
+		if(min == -1)
 		{
-			System.out.println(-1);
+			System.out.println(min);
 		}
 		else
 		{
 			System.out.println(sum+" "+min);
 		}
 	}
+
 }

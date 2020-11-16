@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Chapter/src/com/mr/chapter03/Test.java"/>
+<listEntry value="/Chapter/drill/stringtext/test.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.mr.chapter03.Test"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="stringtext.test"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Chapter"/>
 </launchConfiguration>

@@ -1,0 +1,20 @@
+package stringtext;
+
+import java.util.Calendar;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Calendar calendar = Calendar.getInstance();
+		
+		int year = 
+		calendar.set(20080405);
+	}
+	
+	public static boolean isHW(String str1,String str2)
+	{
+		
+	}
+
+}
