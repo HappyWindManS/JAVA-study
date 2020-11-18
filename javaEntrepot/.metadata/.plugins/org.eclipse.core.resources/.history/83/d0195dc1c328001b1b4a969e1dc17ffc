@@ -18,12 +18,13 @@ public class EX04 {
 		int year2 = Integer.parseInt(text2.substring(0, 4));
 		int month2 = Integer.parseInt(text2.substring(4, 6));
 		int day2 = Integer.parseInt(text2.substring(6));
-			
+		
 		int sum = 0;
 		calendar.set(year,month,day);
 		end.set(year2,month2,day2);
-		
-		while(!calendar.getTime().toString().equals(end.getTime().toString()))
+		System.out.println(calendar.getTime());
+		System.out.println(calendar.YEAR);
+		while(calendar.YEAR==1)
 		{
 			int tempYear =calendar.get(Calendar.YEAR);
 			int tempMonth = calendar.get(Calendar.MONTH);
@@ -36,7 +37,7 @@ public class EX04 {
 			}		
 			calendar.add(Calendar.DATE, 1);
 		}
-		System.out.println(sum);
+		//System.out.println(sum);
 	}
 	
 	public static boolean isHW(String str1,String str2)

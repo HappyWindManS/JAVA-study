@@ -18,12 +18,12 @@ public class EX04 {
 		int year2 = Integer.parseInt(text2.substring(0, 4));
 		int month2 = Integer.parseInt(text2.substring(4, 6));
 		int day2 = Integer.parseInt(text2.substring(6));
-			
+		
 		int sum = 0;
 		calendar.set(year,month,day);
 		end.set(year2,month2,day2);
-		
-		while(!calendar.getTime().toString().equals(end.getTime().toString()))
+		System.out.println(calendar.getTime());
+		while(calendar.get(Calendar.YEAR)==year2&&calendar.get(Calendar.MONTH)==month2&&calendar.get(Calendar.DATE)==day2)
 		{
 			int tempYear =calendar.get(Calendar.YEAR);
 			int tempMonth = calendar.get(Calendar.MONTH);
