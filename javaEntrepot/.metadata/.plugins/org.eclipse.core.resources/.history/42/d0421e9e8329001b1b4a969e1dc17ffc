@@ -20,19 +20,12 @@ public class EX04 {
 		
 		
 		
-		
 		System.out.println(sum);
 	}
 	
 	public static boolean isHW(String text)
 	{
-		for(int i=0,l=text.length();i<l;i++,l--)
-		{
-			if(text.charAt(i)!=text.charAt(l))
-			{
-				return false;
-			}
-		}
+		
 		return true;
 	}
 	
