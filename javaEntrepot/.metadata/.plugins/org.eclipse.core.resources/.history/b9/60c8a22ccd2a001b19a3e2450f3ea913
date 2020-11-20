@@ -1,0 +1,27 @@
+package com.mr.chapter06;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		ArrayList list= new ArrayList();
+		list.add("jack");
+		list.add("rose");
+		list.add("tom");
+		
+		Iterator it = list.iterator();
+		while(it.hasNext())
+		{
+			Object obj = it.next();
+			if("Annie".equals(obj))
+			{
+				list.remove(obj);
+			}
+		}
+		System.out.println(list);
+	}
+
+}
