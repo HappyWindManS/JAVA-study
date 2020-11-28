@@ -1,0 +1,16 @@
+package test;
+
+import java.util.Scanner;
+
+public class There {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int left = input.nextInt();
+		int rigth = input.nextInt();
+		int median = input.nextInt();
+		System.out.println();
+	}
+
+}

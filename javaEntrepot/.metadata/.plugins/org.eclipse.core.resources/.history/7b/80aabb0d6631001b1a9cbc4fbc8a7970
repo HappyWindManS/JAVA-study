@@ -1,0 +1,59 @@
+package test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Seven {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args)  {
+		// TODO 自动生成的方法存根
+		Scanner input = new Scanner(System.in);
+		int size = input.nextInt();
+		String[] array = new String[size];
+		
+		for(int i=0;i<size;i++)
+		{
+			array[i] = input.next();
+		}
+		Arrays.sort(array,new Comparator<String>(){
+
+			@Override
+			public int compare(String text1, String text2) {
+				// TODO 自动生成的方法存根
+				if(text1.charAt(0)-text2.charAt(0)!=0)
+				{
+					return text1.charAt(0)-text2.charAt(0);
+				}
+				else
+				{
+					int lengt1 = text1.length();
+					int lengt2 = text2.length();
+					if(lengt1 > lengt2)
+					{
+						return compare(text1.substring(lengt2,lengt1-lengt2),text2);
+					}
+					else
+					{
+						return compare(text2.substring(lengt1,lengt2-lengt1),text1);
+					}
+				}
+				
+			}
+			
+		});
+		
+		System.out.print(Integer.parseInt(array[0]));
+		for(int i=1;i<size;i++)
+		{
+			System.out.print(array[i]);
+		}
+		
+	}
+
+}

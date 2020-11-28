@@ -1,0 +1,38 @@
+package test;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.Scanner;
+
+public class There {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		double left = input.nval;
+		double rigth = input.nextInt();
+		double median = input.nextInt();
+		
+		if(rigth>=left)
+		{
+			int temp = rigth;
+			rigth = left;
+			left = temp;
+		}
+		if(rigth>=median)
+		{
+			int temp = median;
+			median = rigth;
+			rigth = temp;
+		}
+		if(median<left)
+		{
+			int temp = median;
+			median = left;
+			left = temp;
+		}
+		System.out.println(left+" "+median+" "+rigth);
+	}
+
+}
