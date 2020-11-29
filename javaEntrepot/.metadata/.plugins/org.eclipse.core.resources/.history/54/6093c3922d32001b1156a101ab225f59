@@ -15,15 +15,15 @@ public class Seven {
 		int time = input.nextInt();
 		int[] weight = new int[time];
 		int[] value = new int[time];
-		for(int i=0;i<time;i++)
+		for(int i=0;i<size;i++)
 		{
 			weight[i] = input.nextInt();
 			value[i] = input.nextInt();
 		}
 	
-		System.out.println(getValue(weight,value,size));
+		
 	}
-	  static int getValue(int[] weight, int[] value, int W) {	    
+	 public int maxValue(int[] weight, int[] value, int W) {	    
 	        int n = weight.length;
 	        if (n == 0) return 0;	
 	        int[][] dp = new int[n + 1][W + 1];
