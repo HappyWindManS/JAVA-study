@@ -18,8 +18,7 @@ public class Eight {
 		int time = (int) input.nval;
 		String[] array = new String[time];
 		for(int i=0;i<time;i++)
-		{
-			input.nextToken();
+		{input.nextToken();
 			array[i] = input.sval;
 		}
 		
