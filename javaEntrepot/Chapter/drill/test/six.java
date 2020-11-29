@@ -1,19 +1,45 @@
 package test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StreamTokenizer;
+import java.util.Scanner;
 
 public class six {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-		input.nextToken();
-		input.nextToken();
-		String text = input.sval;
-		
+		Scanner input = new Scanner(System.in);
+		input.next();
+		String row1 = input.next();
+		String row2 = input.next();
+
+		if(row1.charAt(1)=='#'&&row1.charAt(2)=='#')
+		{
+			if(row2.charAt(1)=='#')
+			{
+				System.out.println(4);
+			}
+			else 
+			{
+				System.out.println(6);
+			}
+		}
+		else if(row1.charAt(5)=='#')
+		{
+			if(row1.charAt(1)=='#')
+			{
+				System.out.println(5);
+			}
+			else if(row2.charAt(4)=='#')
+			{
+				System.out.println(2);
+			}else
+			{
+				System.out.println(3);
+			}
+		}
+		else
+		{
+			System.out.println(1);
+		}
 	}
 
 }

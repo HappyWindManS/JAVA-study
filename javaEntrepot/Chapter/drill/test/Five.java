@@ -13,42 +13,33 @@ public class Five {
 		input.nextToken();
 		int size = (int) input.nval;
 		input.nextToken();
-		double time = input.nval;
+		long time = (long) input.nval;
 		
-		double[] array = new double[size];
 		for(int i=0;i<size;i++)
 		{
 			input.nextToken();
-			array[i] = input.nval;
-		}
-		
-		boolean bool = true;
-		int dw = 2;
-		int rigth = 0;		
-		int temp = 0;
-		while(bool)
-		{			
-			if(array[temp]<time)
+			long temp = (long) input.nval;
+			if(time == temp)
 			{
-				temp += size/dw;
+				System.out.println(i);
+				break;
 			}
-			if(array[temp]>time)
+			if(time<temp)
 			{
-				temp -= size/dw;
+				System.out.println(i);
+				break;
 			}
-			if(array[temp]==time)
+			if(i==size-1)
 			{
-				bool = false;
+				if(time<temp)
+				{
+					System.out.println(0);
+					break;
+				}
+				System.out.println(i);	
+				break;
 			}
-			if(dw>size)
-			{
-				temp++;
-				bool = false;
-			}
-			dw *= 2;
-		}
-		
-		System.out.println(temp);
+		}		
 	}
 
 }

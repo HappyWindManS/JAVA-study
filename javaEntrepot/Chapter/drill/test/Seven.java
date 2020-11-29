@@ -10,7 +10,7 @@ public class Seven {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args)  {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		Scanner input = new Scanner(System.in);
 		int size = input.nextInt();
 		String[] array = new String[size];
@@ -19,38 +19,21 @@ public class Seven {
 		{
 			array[i] = input.next();
 		}
-		Arrays.sort(array,new Comparator<String>(){
-
-			@Override
-			public int compare(String text1, String text2) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-				char[] array1=text1.toCharArray();
-				char[] array2=text2.toCharArray();
-				for(int i=0,l=0;i<array1.length;i++,l++)
-				{
-					if(l==array2.length)
-					{
-						l = 0;
-					}
-					if(array1[i]-array2[l]==0)
-					{
-						continue;						
-					}
-					else
-					{
-						return array1[i]-array2[l];
-					}
-				}
-				return 0;
-			}	
-		});
-		
-		System.out.print(Integer.parseInt(array[0]));
-		for(int i=1;i<size;i++)
-		{
-			System.out.print(array[i]);
-		}
+	
 		
 	}
+	 public int maxValue(int[] weight, int[] value, int W) {	    
+	        int n = weight.length;
+	        if (n == 0) return 0;	â€‹
+	        int[][] dp = new int[n + 1][W + 1];
+	        for (int i = 1; i <= n; i++) {
+	            for (int k = 1; k <= W; k++) {
+	               int valueWith_i = (k-weight[i-1] >= 0) ? (value[i-1]+dp[i-1][k-weight[i-1]]) : 0;
+	               int valueWithout_i = dp[i - 1][k];
+	               dp[i][k] = Math.max(valueWith_i, valueWithout_i);
+	            }
+	        }â€‹
+	        return dp[n][W];
+	    }
 
 }
