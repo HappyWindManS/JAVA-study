@@ -1,0 +1,20 @@
+package com.mr.chapter06;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		
+	}
+
+}
+
+class Teacher implements Comparable{
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO 自动生成的方法存根
+		return 0;
+	}
+	
+}

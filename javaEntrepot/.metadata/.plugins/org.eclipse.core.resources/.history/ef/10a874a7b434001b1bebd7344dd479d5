@@ -24,7 +24,6 @@ public class Ex11 {
 		
 		Object first =ts.pollFirst();
 		System.out.println("删除的第一个元素为："+first);
-		System.out.println("删除第一个元素后TreeSet集合变为:"+ts);
 		
 	}
 

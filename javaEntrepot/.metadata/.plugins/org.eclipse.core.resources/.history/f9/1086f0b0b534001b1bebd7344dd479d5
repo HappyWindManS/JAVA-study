@@ -1,0 +1,35 @@
+package com.mr.chapter06;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		
+	}
+
+}
+
+class Teacher implements Comparable{
+	
+	String name;
+	int age;
+	
+	public Teacher(String name,int age)
+	{
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String toString()
+	{
+		return name+":"+age;
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		// TODO 自动生成的方法存根
+		Teacher s = Object
+		return 0;
+	}
+	
+}
