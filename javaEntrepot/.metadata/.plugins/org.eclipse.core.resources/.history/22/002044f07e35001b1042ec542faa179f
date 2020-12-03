@@ -1,0 +1,13 @@
+package com.mr.chapter06;
+
+import java.util.TreeMap;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		TreeMap<String,Integer> map = new TreeMap<String,Integer>();
+		map.put("1", "Lucy")
+	}
+
+}
