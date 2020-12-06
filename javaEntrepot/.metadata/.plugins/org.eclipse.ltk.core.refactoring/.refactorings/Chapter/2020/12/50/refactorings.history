@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将编译单元“com.mr.chapter06.Ex21.java”重命名为“Ex22.java”&#x0D;&#x0A;－ 原始项目：“Chapter”&#x0D;&#x0A;－ 原始元素：“com.mr.chapter06.Ex21.java”&#x0D;&#x0A;－ 重命名的元素：“com.mr.chapter06.Ex22.java”" description="重命名编译单元“Ex21.java”" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.mr.chapter06{Ex21.java" name="Ex22.java" references="false" stamp="1607268058897" version="1.0"/>
+</session>
