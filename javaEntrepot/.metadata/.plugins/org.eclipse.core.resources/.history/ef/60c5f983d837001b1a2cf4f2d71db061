@@ -12,9 +12,9 @@ public class Ex22 {
 		// TODO 自动生成的方法存根
 		 
 		Properties pps = new Properties();
-		pps.load(new FileInputStream("D:/GITHUB/JAVA-study/javaEntrepot/Chapter/src/com/mr/chapter06"));
+		pps.load(new FileInputStream("Ex21.properties"));
 		pps.forEach((k,v)->System.out.println(k+":"+v));
-		FileOutputStream out = new FileOutputStream("D:/GITHUB/JAVA-study/javaEntrepot/Chapter/src/com/mr/chapter06");
+		FileOutputStream out = new FileOutputStream("Ex21.properties");
 		pps.setProperty("charset", "utf-8");
 		pps.store(out, "新增charset编码");
 	}
