@@ -10,10 +10,7 @@ public class demo1 {
 		new Thread(mr,"窗口C").start();
 		new Thread(mr,"窗口D").start();
 		
-		new WindowsTicketsThread("窗口A").start();
-		new WindowsTicketsThread("窗口B").start();
-		new WindowsTicketsThread("窗口C").start();
-		new WindowsTicketsThread("窗口D").start();
+		new WindowsTicketsThread().start();
 	}
 }
 
@@ -33,8 +30,8 @@ class WindowsTicketsThread extends Thread {
 		super();
 	}
 	
-	public WindowsTicketsThread(String name){
-		super(name);
+	public WindowsTicketsThread(){
+		super();
 	}
 	
 	static int ticket=100;

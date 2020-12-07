@@ -11,9 +11,9 @@ public class demo1 {
 		new Thread(mr,"窗口D").start();
 		
 		new WindowsTicketsThread("窗口A").start();
-		new WindowsTicketsThread("窗口B").start();
-		new WindowsTicketsThread("窗口C").start();
-		new WindowsTicketsThread("窗口D").start();
+		new WindowsTicketsThread("窗口A").start();
+		new WindowsTicketsThread("窗口A").start();
+		new WindowsTicketsThread("窗口A").start();
 	}
 }
 
