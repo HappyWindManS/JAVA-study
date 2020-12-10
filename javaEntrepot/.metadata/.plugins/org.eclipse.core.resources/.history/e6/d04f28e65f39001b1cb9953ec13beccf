@@ -1,0 +1,29 @@
+package com.mr.chapter07;
+
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class Ex17 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO 自动生成的方法存根
+		RandomAccessFile raf = new RandomAccessFile("text.txt","rw");
+		
+		int times = raf.readLine();
+		System.out.println(times);
+		
+		if(times>0)
+		{
+			System.out.println("剩余:"+times);
+			raf.seek(0);
+			System.out.println(raf.getFilePointer());
+			raf.write((times+"").getBytes());
+			System.out.println(raf.getFilePointer());
+		}else
+		{
+			System.out.print("over");
+		}
+		raf.close();
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.mr.chapter07;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+public class Ex17 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO 自动生成的方法存根
+		RandomAccessFile raf = new RandomAccessFile("time.txt","rw");
+		
+		int times = raf.readLine()-1;
+	}
+
+}
