@@ -30,9 +30,11 @@ public class Post implements Runnable{
 			System.out.println("连接服务器成功");
 		} catch (UnknownHostException e) {
 			// TODO 自动生成的 catch 块
+			System.out.println("服务器连接失败");
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
+			System.out.println("服务器连接失败");
 			e.printStackTrace();
 		}
 		

@@ -2,6 +2,8 @@ package Client;
 
 import java.util.Scanner;
 
+import Server.ObPort;
+
 public class MyClient {
 
 	private final String name = "MR_QIN";
@@ -14,6 +16,6 @@ public class MyClient {
 		System.out.println("请输入你的用户名");
 		String name = input.next();
 		Message mess = new Message(name);
-		new Post(port,mess);
+		new Thread(new Post(port,mess)).start();
 	}
 }
