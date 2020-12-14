@@ -1,12 +1,10 @@
 package Server;
 
-import java.io.IOException;
-
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		new MyServer(8080);
-		
+		new Server(8080);
 	}
+
 }

@@ -1,17 +1,17 @@
-package Client;
+package client;
 
 import java.io.Serializable;
-
-public class Message implements Serializable{
-	
+ 
+public class Message implements Serializable {
+   
 	private String message;
-	
 	private String user;
-
-	Message(String user){
-		setUser(user);
-	}
 	
+	Message(String message,String user)
+	{
+		this.setMessage(message);
+		this.setUser(user);
+	}
 
 	public String getMessage() {
 		return message;
@@ -28,6 +28,4 @@ public class Message implements Serializable{
 	public void setUser(String user) {
 		this.user = user;
 	}
-
-	
 }

@@ -1,60 +1,59 @@
 package Server;
 
-
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.sql.Date;
-import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Scanner;
+
+import client.Message;
+
 
 public class ObPort implements Runnable{
-	
-	private Socket client;
-	Scanner keyBorad = new Scanner(System.in);
-	
-	ObPort(Socket client)
-	{
-		this.client = client;
-		
-	}
-	
-	public void run()
-	{
-		InputStream in = null;
-		
-		while(true)
-		{
-			try {
-				in = client.getInputStream();
-				ObjectInputStream obj = new ObjectInputStream(in);
-				Message temp = null;
-				try {
-					temp = (Message)obj.readObject();
-					
-				} catch (ClassNotFoundException e) {
-					// TODO 自动生成的 catch 块
-					e.printStackTrace();
-				}
-				if(temp == null)
-				{
-					System.out.println("用户"+temp.getUser()+"已退出");
-					break;
-				}
-				PrintWriter out = new PrintWriter(client.getOutputStream());
-				out.println(temp.getMessage()+"   来自"+temp.getUser()+" --"+Calendar.getInstance());
-				
-			} catch (IOException e) {
-				// TODO 自动生成的 catch 块
-				e.printStackTrace();
-			}
-			
-		}
-	}
+    Socket socket=null;
+     
+    public ObPort(Socket socket) {
+        super();
+        this.socket = socket;
+    }
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        OutputStream os = null;
+        PrintWriter pw = null;
+        try {
+            InputStream is = socket.getInputStream();
+            ObjectInputStream ois=new ObjectInputStream(is);
+            //readObject()方法必须保证服务端和客户端的User包名一致，要不然会出现找不到类的错误
+            // System.out.println("客户端发送的对象：" + (Message)ois.readObject());
+            Message mess = (Message)ois.readObject();
+            os=socket.getOutputStream();
+            pw=new PrintWriter(os);
+            pw.println(mess.getMessage()+"  来自"+mess.getUser());
+            pw.flush();          
+            
+        } catch (IOException | ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally{
+            try{
+                if(pw!=null){
+                    pw.close();
+                }
+                if(os!=null){
+                    os.close();
+                }
+                if(socket!=null){
+                    socket.close();
+                }
+            }catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            }
+
+        }
+    }
+    
 }
