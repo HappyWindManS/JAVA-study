@@ -29,6 +29,7 @@ public class MainTest {
 		{
 			System.out.println(line);
 		}*/
+		Thread.sleep(9 * 60 * 60 * 1000);
 		while(true)
 		{	
 			String temp;		
@@ -42,6 +43,7 @@ public class MainTest {
 			}
 			new SandEmail("longqiping@vip.163.com","3066004354@qq.com","https://www.bbgu.edu.cn/的状态为："+temp);
 			new SandEmail("3066004354@qq.com","3066004354@qq.com","https://www.bbgu.edu.cn/的状态为："+temp);
+			Thread.sleep(24 * 60 * 60 * 1000);
 		}
 	}
 	
