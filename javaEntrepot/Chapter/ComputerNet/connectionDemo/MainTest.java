@@ -29,7 +29,7 @@ public class MainTest {
 		{
 			System.out.println(line);
 		}*/
-		Thread.sleep(9 * 60 * 60 * 1000);
+		
 		while(true)
 		{	
 			String temp;		
