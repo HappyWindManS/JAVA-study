@@ -29,9 +29,11 @@ public class Ex05 {
 				double temp2 = o2/Math.pow(10, lengtho2);
 				int num1 = (int) (temp1 * Math.pow(10,lengthMin));
 				int num2 = (int) (temp2 * Math.pow(10,lengthMin));
-				if(num1 == num2 && (o1>num1||o2>num2))
+				if(num1 == num2 && lengtho1!=lengtho2)
 				{
-					
+					return lengtho1>lengtho2?
+							compare(o2,o1-(int)(num1*Math.pow(10, lengtho1-lengthMin)))
+						   :compare(o1,o2-(int)(num2*Math.pow(10, lengtho2-lengthMin)));
 				}
 				return num2-num1;
 			}
