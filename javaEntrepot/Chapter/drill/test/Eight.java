@@ -24,6 +24,7 @@ public class Eight {
 		}
 		
 		Arrays.sort(array,new Comparator<String>(){
+			
 			public int compare(String s1, String s2) {
 				int l1 = s1.length();
 				int l2 = s2.length();

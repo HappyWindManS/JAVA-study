@@ -12,12 +12,20 @@ public class EX04 {
 	public static void main(String[] args) throws IOException {
 		// TODO 自动生成的方法存根
 		int sum = 0;
-		StreamTokenizer input =new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-		input.nextToken();
-		String action = input.sval;
-		input.nextToken();
-		String action1 = input.sval;
+		Scanner input = new Scanner(System.in);
+		int action = input.nextInt();
+		String end =  input.next();
 		
+		int year = action/10000;
+		int month = action/100%100;
+		int day = action%100;
+		
+		String temp;
+		while()
+		{
+			
+		}
+		Calendar calendar = Calendar.getInstance();
 		
 		
 		

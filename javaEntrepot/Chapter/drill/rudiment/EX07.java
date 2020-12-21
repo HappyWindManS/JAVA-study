@@ -7,24 +7,27 @@ public class EX07 {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
+		/*
+		 * 当获取一个数时，将其分解成1+2+3+4....+n的形式，然后获取其行数与列数
+		 * */
 		Scanner input = new Scanner(System.in);
-		//获取第几位数
+		//获取数
 		int num = input.nextInt();
-		//判断在第几列
-		int line = 0;
-		int temp = 0;
-
-		int i = 1;
-		for(;temp<num;i++)
+		
+		int Column = 1;
+		//temp用于记录第几次循环
+		int temp = 1;
+		while(num>Column)
 		{
-			temp += i;
-			line = i;
+			num -= Column;
+			Column++;
+			temp++;
 		}
-		int[][] array = new int[line+1][2];
-		for(int l=1,s =line;l<line+1;l++,s--)
+		//复数次的循环一定是1在前
+		int laft = 1;
+		if(temp%2==0)
 		{
-			array[l][0] = l;
-			array[l][1] = s;			
+			System.out.println(laft+num+"/"+temp);
 		}
 
 
