@@ -18,6 +18,7 @@ public class MainTest {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO 自动生成的方法存根
 		String url = "www.bbgu.edu.cn";
+		
 		/*
 		InetAddress src = InetAddress.getLocalHost();
 		InetAddress webIp = InetAddress.getByName(url);
@@ -41,7 +42,7 @@ public class MainTest {
 			{
 				temp = "不可连通";
 			}
-			new SandEmail("longqiping@vip.163.com","3066004354@qq.com","https://www.bbgu.edu.cn/的状态为："+temp);
+			//new SandEmail("longqiping@vip.163.com","3066004354@qq.com","https://www.bbgu.edu.cn/的状态为："+temp);
 			new SandEmail("3066004354@qq.com","3066004354@qq.com","https://www.bbgu.edu.cn/的状态为："+temp);
 			Thread.sleep(24 * 60 * 60 * 1000);
 		}
