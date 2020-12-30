@@ -16,7 +16,7 @@ public class Test {
 		       int d = e = 30;
 		       int b;
 		       int a = 10;
-		       String s = new String(new char {'i','t','c','s','t'});
+		       String s = new String(new char[]{'i','t','c','s','t'});
 		       int[]arr= {1,2,23,4,5};
 		} 
 }
