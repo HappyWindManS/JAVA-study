@@ -35,10 +35,13 @@ public class Ex06 {
 			strTemp += array[i]+",";
 		}
 		hs.add(strTemp);
+		
 		for(int l=0;;l++)
 		{
+			//初始化变量
 			int temp = 0;
 			strTemp = "";
+			//获取最大值与最小值的下标
 			for(int i=0;i<time;i++)
 			{
 				if(array[temp]<array[i])
@@ -46,19 +49,25 @@ public class Ex06 {
 					temp = i;
 				}
 			}
+			if(temp==0)
+			{
+				break;
+			}
+			//对数组进行操作
 			for(int i = temp-1;i>=0;i--)
 			{ 	
-				array[temp]--;
-				if(array[i]==array[temp])
+				if(array[i]==array[temp]-1)
 				{
 					continue;
 				}
 				else
 				{
+					array[temp]--;
 					array[i]++;
 					break;
 				}
 			}
+			//对数组顺序重置，存入hash表
 			Arrays.sort(array);			
 			for(int i =0;i<time;i++)
 			{
@@ -75,7 +84,5 @@ public class Ex06 {
 		}	
 		System.out.println(hs.size());
 	}
-	
-	
 
 }
